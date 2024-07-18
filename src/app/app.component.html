@@ -1,1 +1,12 @@
-<app-users-list></app-users-list>
+<app-users-filter
+    (keyChanged) = "getInputValue($event)"
+>
+
+</app-users-filter>
+
+
+<app-users-list
+    [myUsersList] = "myUserdata" 
+>
+
+</app-users-list>

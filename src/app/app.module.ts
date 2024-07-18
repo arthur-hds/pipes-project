@@ -7,6 +7,7 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { UserStatusPipe } from '../pipes/user-status.pipe';
 import { ImageStatusPipe } from '../pipes/image-status.pipe';
+import { UsersFilterComponent } from './components/users-filter/users-filter.component';
 
 
 
@@ -15,7 +16,8 @@ import { ImageStatusPipe } from '../pipes/image-status.pipe';
     AppComponent,
     UsersListComponent,
     UserStatusPipe,
-    ImageStatusPipe
+    ImageStatusPipe,
+    UsersFilterComponent
     
   ],
   imports: [
