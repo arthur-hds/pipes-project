@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IUserResponse } from '../../../interface/user-response.interface';
-import { UsersList } from '../../../data/users.list';
+
+
 
 @Component({
   selector: 'app-users-list',
