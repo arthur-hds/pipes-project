@@ -16,7 +16,7 @@ export const UsersList: IUserResponse[] = [
         "risck": 0.069
     },
     {
-        "user": "Maria",
+        "user": "Lucas",
         "status": 1,
         "dateValue": "2023-16-36T13:15:00.00Z",
         "value": 759.99,
