@@ -1,16 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UsersList } from '../data/users.list';
+import { Observable } from 'rxjs';
+import { IUserResponse } from '../interface/user-response.interface';
+import { UsersService } from './services/users.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'pipes-project';
 
-  myUserdata = UsersList;
   filterText = '';
+
+
+  constructor(private readonly users:UsersService){}
+
+  $users!: Observable<IUserResponse[]>;
+
+
+  ngOnInit() {
+    
+    this.$users = this.users.getUsers();
+    console.log(this.$users)
+
+  }
 
 
   getInputValue(value: string){

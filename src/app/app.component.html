@@ -6,7 +6,8 @@
 
 
 <app-users-list
-    [myUsersList] = "myUserdata | usersFilter:filterText" 
+    *ngIf = "($users | async) as UsersData"
+    [myUsersList] = "UsersData | usersFilter:filterText" 
 >
 
 </app-users-list>
