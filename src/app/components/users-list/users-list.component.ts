@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IUserResponse } from '../../../interface/user-response.interface';
+import { UsersResponseList } from '../../types/users-response.type';
 
 
 
@@ -11,7 +12,7 @@ import { IUserResponse } from '../../../interface/user-response.interface';
 export class UsersListComponent {
 
   @Input({required: true})
-  myUsersList :IUserResponse[] = [{}] as IUserResponse[];
+  myUsersList :UsersResponseList = [{}] as UsersResponseList;
 
   displayedColumns = ["user", "status", "date", "time", "value", "risck"]
 }

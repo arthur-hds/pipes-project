@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { IUserResponse } from "../../interface/user-response.interface";
 import { UsersList } from "../../data/users.list";
 import { Observable, of } from "rxjs";
+import { UsersResponseList } from "../types/users-response.type";
 
 @Injectable({
     providedIn: "root"
@@ -9,9 +10,9 @@ import { Observable, of } from "rxjs";
 export class UsersService {
     
 
-    getUsers(): Observable<IUserResponse[]>{
+    getUsers(): Observable<UsersResponseList>{
     
-        const users: IUserResponse[] = UsersList;
+        const users: UsersResponseList = UsersList;
     
         return of(users);
 

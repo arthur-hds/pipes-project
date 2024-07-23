@@ -3,6 +3,7 @@ import { UsersList } from '../data/users.list';
 import { Observable } from 'rxjs';
 import { IUserResponse } from '../interface/user-response.interface';
 import { UsersService } from './services/users.service';
+import { UsersResponseList } from './types/users-response.type';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent implements OnInit{
 
   constructor(private readonly users:UsersService){}
 
-  $users!: Observable<IUserResponse[]>;
+  $users!: Observable<UsersResponseList>;
 
 
   ngOnInit() {
