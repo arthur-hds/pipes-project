@@ -1,14 +1,25 @@
 import { Pipe, PipeTransform } from "@angular/core";
 import { IUserResponse } from "../interface/user-response.interface";
+import { UsersResponseList } from "../app/types/users-response.type";
 
 @Pipe({
     name: "usersFilter"
 })
 export class UsersFilterPipe implements PipeTransform {
 
-    transform(usersList: IUserResponse[], inputValue: string): IUserResponse[] {
+    transform(usersList: UsersResponseList | null, inputValue: string): IUserResponse[] {
         
-        let newUsersList: IUserResponse[] = [];
+        if(!usersList){
+            return [];
+        }
+
+
+        if(usersList.length === null){
+            return usersList;
+        }
+
+
+        let newUsersList: UsersResponseList = [];
 
         usersList.forEach(user => {
             
