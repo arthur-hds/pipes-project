@@ -1,13 +1,13 @@
-<app-users-filter
-    (keyChanged) = "getInputValue($event)"
->
+<div class="operations">
 
-</app-users-filter>
+    <app-users-filter (keyChanged)="getInputValue($event)">
+
+    </app-users-filter>
 
 
-<app-users-list
-    *ngIf = "($users | async) as UsersData"
-    [myUsersList] = "UsersData | usersFilter:filterText" 
->
+    <app-users-list *ngIf="($users | async) as UsersData" [myUsersList]="UsersData | usersFilter:filterText">
 
-</app-users-list>
+    </app-users-list>
+
+
+</div>

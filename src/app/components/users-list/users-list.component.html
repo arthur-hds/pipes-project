@@ -1,19 +1,27 @@
-<div class="users-list">
+<div class="operations__table">
 
 
     <table mat-table [dataSource]="myUsersList">
 
 
         <ng-container matColumnDef="user">
-            <th mat-header-cell *matHeaderCellDef> User </th>
-            <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+            <th 
+                class="operations__table-cell operations__table-cell--white" 
+                mat-header-cell *matHeaderCellDef> User </th>
+
+            <td 
+            class="operations__table-cell"
+            mat-cell *matCellDef="let element"> {{element.user}} </td>
         </ng-container>
 
 
         
         <ng-container matColumnDef="status">
-            <th mat-header-cell *matHeaderCellDef> Status </th>
-            <td mat-cell *matCellDef="let element"> {{element.status | status}}   
+            <th 
+            class="operations__table-cell operations__table-cell--white" 
+            mat-header-cell *matHeaderCellDef> Status </th>
+            <td class="operations__table-cell"
+            mat-cell *matCellDef="let element"> {{element.status | status}}   
                 <img class="status-image" [src]="element.status | statusImage">
             </td>
            
@@ -24,26 +32,38 @@
 
         
         <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef> Date </th>
-            <td mat-cell *matCellDef="let element"> {{element.dateValue | date}} </td>
+            <th 
+            class="operations__table-cell operations__table-cell--white" 
+            mat-header-cell *matHeaderCellDef> Date </th>
+            <td class="operations__table-cell" mat-cell *matCellDef="let element"> {{element.dateValue | date}} </td>
         </ng-container>
 
 
         <ng-container matColumnDef="time">
-            <th mat-header-cell *matHeaderCellDef> Time </th>
+            <th 
+            class="operations__table-cell operations__table-cell--white" 
+            mat-header-cell *matHeaderCellDef> Time </th>
             <td mat-cell *matCellDef="let element"> {{element.dateValue | date : "shortTime" }} </td>
         </ng-container>
 
 
         <ng-container matColumnDef="value">
-            <th mat-header-cell *matHeaderCellDef> Value </th>
-            <td mat-cell *matCellDef="let element"> {{element.value | currency}} </td>
+            <th 
+            class="operations__table-cell operations__table-cell--white" 
+            mat-header-cell *matHeaderCellDef> Value </th>
+            <td 
+            class="operations__table-cell"
+            mat-cell *matCellDef="let element"> {{element.value | currency}} </td>
         </ng-container>
 
 
         <ng-container matColumnDef="risck">
-            <th mat-header-cell *matHeaderCellDef> Risck </th>
-            <td mat-cell *matCellDef="let element"> {{element.risck | percent}} </td>
+            <th 
+            class="operations__table-cell operations__table-cell--white" 
+            mat-header-cell *matHeaderCellDef> Risck </th>
+            <td 
+            class="operations__table-cell"
+            mat-cell *matCellDef="let element"> {{element.risck | percent}} </td>
         </ng-container>
 
 
