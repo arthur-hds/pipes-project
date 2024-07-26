@@ -1,10 +1,12 @@
 <div class="operations">
 
+
+     <!-- It gets the value from input -->
     <app-users-filter (keyChanged)="getInputValue($event)">
 
     </app-users-filter>
 
-
+    <!-- UsersData will be filtered with the current input value during the typing process -->
     <app-users-list *ngIf="($users | async) as UsersData" [myUsersList]="UsersData | usersFilter:filterText">
 
     </app-users-list>

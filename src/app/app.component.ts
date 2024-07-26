@@ -13,6 +13,7 @@ import { UsersResponseList } from './types/users-response.type';
 export class AppComponent implements OnInit{
   title = 'pipes-project';
 
+  //Texted Value
   filterText = '';
 
 
@@ -22,13 +23,13 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit() {
-    
+    //Observable
     this.$users = this.users.getUsers();
     console.log(this.$users)
 
   }
 
-
+  //Populating input text
   getInputValue(value: string){
 
     this.filterText = value;
